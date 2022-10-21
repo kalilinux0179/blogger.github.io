@@ -1,0 +1,500 @@
+@import url('./fonts.css');
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding:0px;
+    overflow-x: hidden;
+}
+
+// Gloabl Properties starts
+
+a{
+    text-decoration: none;
+    color: var(--text-gray);
+}
+
+.text-gray{
+    color: var(--text-gray);
+}
+
+p{
+    font-family: var(--ubuntu);
+    color: var(--text-gray);
+    font-size:1.2em;
+    font-weight: 100;
+}
+
+.flex-row{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+// Global Properties ends
+// variable starts
+
+:root{
+    --ubuntu:'ubuntu','sans serif', 'cursive';
+    --text-gray:#3f4954;
+    --text-light:#686666da;
+    --bg-color:#0f0f0f;
+    --white:#ffffff;
+    --midnight:#104f55;
+}
+
+// variable ends
+
+// navbar starts
+.nav{
+    background-color: white;
+    padding:0 2rem;
+    height: 0rem;
+    min-height: 10vh;
+    overflow:hidden;
+    transition: height 1s ease-in-out;
+}
+
+.nav .nav-brand a{
+    font-size: 1.6rem;
+    padding: 1rem 0;
+    display: block;
+    font-family: var(--ubuntu);
+}
+.nav-menu{
+    justify-content: space-between;
+}
+
+.toogle-collapse{
+    position: absolute;
+    top: 0%;
+    right: 5%;
+    // width: 90%;
+    cursor: pointer;
+    display: none;
+}
+
+.toogle-icons{
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.7rem 0;
+}
+
+.toogle-icons i{
+    font-size: 1.4rem;
+    color: var(--text-gray);
+}
+.nav-items{
+    list-style-type: none;
+    display: flex;
+}
+
+.nav-links{
+    padding: 1.6rem 1rem;
+    font-size: 1.1rem;
+    position: relative;
+}
+
+.nav-links:hover{
+    background-color: var(--midnight);
+}
+
+.nav-links a:hover{
+    color:var(--white);
+}
+
+.social{
+    padding: 1.4rem 0;
+}
+
+.social i{
+    padding: 0 0.2rem;
+}
+
+.social i:hover{
+    color: #a1c4cf;
+}
+
+.collapse{
+    height: 30rem;
+}
+// navbar ends
+
+// main site title section starts
+main .site-title{
+    background:url('../assets/Background-image.png');
+    background-size: cover;
+    height: 110vh;
+    display: flex;
+    justify-content: center;
+}
+
+.site-background{
+    padding-top: 10rem;
+    text-align: center;
+    color: var(--white);
+    font-family: var(--ubuntu);
+}
+
+.site-background h1,h3{
+    margin: 1rem;
+}
+
+.site-background h1{
+    font-size: 2.5rem;
+}
+
+.site-background h3{
+    font-size: 1.5rem;
+}
+
+.btn{
+    margin: 1.8rem;
+    background-color: skyblue;
+    border: none;
+    padding:1rem 3rem;
+    border-radius: 50px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+// main site title section ends
+
+// Blog section starts
+.owl-carousel .owl-stage {
+  overflow-y: hidden;
+}
+
+.container{
+    margin: 0 5vw;
+}
+
+div.blog{
+    background: url('../assets/Abract01.png');
+    background-repeat: no-repeat;
+    background-position:right;
+    width: 100%;
+    background-size: 65%;
+    font-family: var(--ubuntu);
+    // height: 100vh;
+}
+
+.blog-post{
+    padding-top: 6rem;
+}
+
+.blog-post .blog-content{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 3rem 2rem;
+    box-shadow: 0 15px 20px rgba(0,0,0,0.2);
+}
+
+.blog-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding:2rem 0;
+}
+
+// Blog section ends
+
+// site content starts
+
+// posts starts
+.site-content{
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
+
+.site-content .post-content > .post-image, .post-title{
+    padding: 1rem 2rem;
+    position: relative;
+}
+
+.site-content .post-content > .post-image .post-info{
+    background: rgb(157, 218, 241);
+    padding: 1rem;
+    position: absolute;
+    bottom: 0%;
+    left: 15vw;
+    border-radius: 3rem;
+}
+
+.post-title a{
+    font-size: 1.5rem;
+    font-family: sans-serif;
+    margin: 0.5rem 0;
+    display: inline-block;
+    font-weight: 900;
+}
+.post-content > .post-image >div{
+    overflow: hidden;
+}
+
+.post-image .post-info{
+    font-family: var(--ubuntu);
+}
+
+.post-image .post-info span{
+    margin: 0.3rem;
+}
+
+.post-image .img{
+    width: 100%;
+    transition: all 1s;
+}
+
+.post-image .img:hover{
+    transform:scale(1.2);
+}
+
+.post-btn{
+    border-radius: 5px;
+    margin: 2rem 0;
+}
+
+.pagination{
+    justify-content: center;
+    color: var(--text-gray);
+    margin: 1rem 0;
+}
+
+.pagination a{
+    padding: .6rem .9rem;
+    color: var(--text-gray);
+    margin: 0.3rem 0.5rem;
+    font-family: var(--ubuntu);
+}
+
+.pagination .pages{
+    background-color: var(--text-gray);
+    color: var(--white);
+    border-radius: 50%;
+
+}
+// posts ends
+// sidebar starts
+.sidebar .category-list{
+    font-family: var(--ubuntu);
+    padding: 0rem 2rem;
+}
+
+.category > h2{
+    margin: 1rem 0rem;
+    font-weight: bolder;
+    font-size: 2rem;
+    font-family: var(--ubuntu);
+}
+
+.category-list .list-items{
+    background-color: #ff6347d6;
+    padding: .6rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
+    border-radius: 3rem;
+}
+
+.list-items a{
+    color: black;
+}
+
+.popular-post .post-content a{
+    font-size: 1rem;
+}
+
+.popular-post h2{
+    padding-top: 10rem;
+
+}
+.popular-post-info{
+    background-color: white;
+    position: absolute;
+    bottom: 5%;
+    padding :0.5rem;
+}
+
+.popular-post .post-title{
+    margin: 0rem;
+}
+
+.newsletter{
+    padding-top: 3rem;
+}
+
+// .newsletter .form-element{
+//     padding:0.5rem 2rem;
+// }
+
+.newsletter .form-element .input-element{
+    margin: 1rem 0rem;
+    width: 90%;
+    height: 3rem;
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding: 0.3rem 1rem;
+}
+
+.newsletter .form-element .form-btn{
+    border-radius: 5px;
+    width: 90%;
+    margin: 0;
+    background-color: teal;
+    color: white;
+}
+
+.popular-tags{
+    margin: 5rem 0;
+    font-family: var(--ubuntu);
+}
+
+.popular-tags .tags{
+    padding: 0.5rem 1rem;
+}
+.tag{
+    padding: 0.5rem 1rem;
+    background-color: royalblue;
+    color: white;
+    margin: 0.3rem;
+    border-radius: 3rem;
+    font-family: var(--ubuntu);
+}
+// sidebar ends
+// site content ends
+
+// footer starts
+footer{
+    height: 100%;
+    background-color:var(--bg-color);
+    padding:1rem 0;
+    position: relative;
+}
+
+footer .container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    font-family: var(--ubuntu);
+}
+
+.container > div {
+    padding:1rem;
+}
+
+footer .container h2{
+    color: var(--white);
+    padding: 0.5rem 0;
+}
+
+footer .container p{
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+}
+
+.newsletter-email{
+    width: 70%;
+    padding: 0.5rem 1rem;
+    background-color: black;
+    color: white;
+    border: none;
+    outline: none;
+    margin-top: 0.5rem;
+}
+
+.form-element{
+    overflow-y: hidden;
+}
+
+.form-element span{
+    background-color: skyblue;
+    padding: 0.5rem 0.7rem;
+}
+
+.instagram  div > img{
+    display: inline-block;
+    width: 25%;
+    height: 50%;
+    margin:0.5rem;
+}
+
+.follow-us div i{
+    color: var(--white);
+    padding:0.5rem 0.4rem;
+    font-size: 1.2rem;
+}
+
+.rights{
+    text-align: center;
+}
+
+.rights h4{
+    color: var(--white);
+}
+
+.move-up{
+    position: absolute;
+    right: 6%;
+    bottom: 20%;
+    color: white;
+}
+.move-up:hover{
+    color: turquoise;
+    cursor: pointer;
+}
+// footer ends
+// viewport less than or equal to 330px starts
+@media only screen and (max-width: 530px){
+    .pagination{
+        display: none;
+    }
+}
+// viewport less than or equal to 330px ends
+// viewport less than or equal to 530px starts
+@media only screen and (max-width: 530px){
+    .post-info{
+        display: none;
+    }
+}
+// viewport less than or equal to 530px ends
+// viewport less than or equal to 750px starts
+@media only screen and (max-width: 750px){
+    .nav .nav-menu,.nav-items{
+        flex-direction: column;
+    }
+    .toogle-collapse{
+        display: initial;
+    }
+    footer .container{
+        grid-template-columns: repeat(1, 1fr) !important;
+    }
+    
+}
+// viewport less than or equal to 750px ends
+// viewport less than or equal to 850px starts
+@media only screen and (max-width: 850px){
+    .site-content{
+        grid-template-columns: 100%;
+    }
+    .popular-post h2{
+        padding-top: 2rem;
+    }
+}
+// viewport less than or equal to 850px ends
+// viewport less than or equal to 1130px starts
+@media only screen and (max-width:1130px){
+    .post-info{
+        left: 2rem !important;
+        border-radius: 1px !important;
+        bottom: 1.3rem !important;
+    }
+    .popular-post-info{
+        display: none !important;
+    }
+    footer .container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+// viewport less than or equal to 1130px ends
